@@ -20077,7 +20077,7 @@ void ImGui::DebugNodeDrawList(ImGuiWindow* window, ImGuiViewportP* viewport, con
     ImGuiContext& g = *GImGui;
     ImGuiMetricsConfig* cfg = &g.DebugMetricsConfig;
     int cmd_count = draw_list->CmdBuffer.Size;
-    if (cmd_count > 0 && draw_list->CmdBuffer.back().ElemCount == 0 && draw_list->CmdBuffer.back().UserCallback == NULL)
+    if (cmd_count > 0 && draw_list->CmdBuffer.back().ElemCount == 0 && draw_list->CmdBuffer.back().UserCallback == nullptr)
         cmd_count--;
     bool node_open = TreeNode(draw_list, "%s: '%s' %d vtx, %d indices, %d cmds", label, draw_list->_OwnerName ? draw_list->_OwnerName : "", draw_list->VtxBuffer.Size, draw_list->IdxBuffer.Size, cmd_count);
     if (draw_list == GetWindowDrawList())
